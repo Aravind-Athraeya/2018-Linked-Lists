@@ -5,7 +5,7 @@
 #include <queue>
 using namespace std;
 
-
+// http://btechsmartclass.com/data_structures/queue-using-linked-list.html
 typedef struct ListNode
 {
 	int value;
