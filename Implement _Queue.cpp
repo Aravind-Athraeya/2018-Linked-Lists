@@ -25,6 +25,8 @@ void Queue(node** head_ref, int new_data)
 	if((*head_ref)->tailer == NULL)
 	{ 
 		 (*head_ref)->header = (*head_ref)->tailer = new_node;
+		
+		//seperately kepe track of head and tail
 	}
 	else
 	{
