@@ -55,6 +55,29 @@ int CountList(node *nodex)
 
 	return count;
 }
+
+
+int binaryToDecimal(int n)
+{
+	int num = n;
+	int dec_value = 0;
+
+	// Initializing base value to 1, i.e 2^0 
+	int base = 1;
+
+	int temp = num;
+	while (temp) {
+		int last_digit = temp % 10;
+		temp = temp / 10;
+
+		dec_value += last_digit * base;
+
+		base = base * 2;
+	}
+
+	return dec_value;
+}
+
 int ConvertToDecimal(string binarystring, int count)
 {
 	int deci = 0;
@@ -100,8 +123,8 @@ int main()
 
 	int ovunt  = CountList(head2);
 	string reverseTest = GetStringFromList(head2 );
-	int value = ConvertToDecimal(reverseTest, ovunt);
-
+	int n = stoi(reverseTest); 
+         int value =binaryToDecimal(n);
 	return 0; 
 
 }
