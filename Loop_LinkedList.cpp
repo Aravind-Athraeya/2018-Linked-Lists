@@ -3,6 +3,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include <queue>
+
+#include <unordered_set>
+
 using namespace std;
 
 
@@ -43,6 +46,36 @@ int CountList(node *nodex)
 
 	return count;
 }
+
+//using hashing
+
+
+bool detectLoop2(node* h)
+{
+	unordered_set<node*> s;
+	while (h != NULL) {
+		// If this node is already present 
+		// in hashmap it means there is a cycle 
+		// (Because you we encountering the 
+		// node for the second time). 
+	
+		if (s.find(h) != s.end()) // this is boolean only when you comapre to s.end
+			// conditions checks is there are any item after the last element for the find condition
+			return true;
+
+
+		// If we are seeing the node for 
+		// the first time, insert it in hash 
+		s.insert(h);
+
+		h = h->Next;
+	}
+
+	return false;
+}
+
+
+
 
 bool detectloop(node* head) {
 
@@ -98,6 +131,7 @@ int main()
 	/* Create a loop for testing */
 //	head->Next->Next->Next->Next = head;
 	detectloop(head);
+	// detectloop2(head); // To detect using hashing
 	return 0;
 
 }
