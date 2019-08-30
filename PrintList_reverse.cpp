@@ -41,7 +41,9 @@ void PrintList(node *ptr1)
 	}
 	
 	PrintList(ptr1->Next);
-	cout << ptr1->value << endl;
+	cout << ptr1->value << endl; 
+	//Same as the other print list just  cout gets called after the recursive 
+	//function so last item gets printed first and bubbles up
 
 }
 
