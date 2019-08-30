@@ -85,6 +85,32 @@ void printList(node *nodex)
 
 
 
+/* Function to remove duplicates from a 
+   unsorted linked list */
+void removeDuplicateshash(struct Node *start) 
+{ 
+    // Hash to store seen values 
+    unordered_set<int> seen; 
+  
+    /* Pick elements one by one */
+    struct Node *curr = start; 
+    struct Node *prev = NULL; 
+    while (curr != NULL) 
+    { 
+        // If current value is seen before 
+        if (seen.find(curr->data) != seen.end()) 
+        { 
+           prev->next = curr->next; 
+           delete (curr); 
+        } 
+        else
+        { 
+           seen.insert(curr->data); 
+           prev = curr; 
+        } 
+        curr = prev->next; 
+    } 
+} 
 
 int main()
 {
@@ -97,7 +123,7 @@ int main()
 	push(&head, 43);
 	push(&head, 43);
 	push(&head, 60);
-	node * nsew = RemoveDuplicates(head);
+	node * nsew = RemoveDuplicates(head); //removeDuplicateshash(head);  // Using hashing
 	printList(nsew);
 	return 0;
 
