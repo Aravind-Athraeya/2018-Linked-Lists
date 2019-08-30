@@ -40,6 +40,8 @@ void PrintList(node *ptr1)
 		return  ;
 	}
 	cout << ptr1->value << endl;
+		//Same as the other print list just  cout gets called before the recursive 
+	//function so first item gets printed first and bubbles down
 	PrintList(ptr1->Next);
 	
 
