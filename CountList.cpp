@@ -5,7 +5,7 @@
 #include <queue>
 using namespace std;
 
-
+ 
 typedef struct ListNode
 {
 	int value;
