@@ -24,14 +24,14 @@ void Queue(node** head_ref, int new_data)
 
 	if((*head_ref)->tailer == NULL)
 	{ 
-		 (*head_ref)->header = (*head_ref)->tailer = new_node;
+		 (*head_ref)->header = (*head_ref)->tailer = new_node; // Mark both head and tail
 		
 		//seperately kepe track of head and tail
 	}
 	else
 	{
-		(*head_ref)->tailer->Next = new_node;
-		(*head_ref)->tailer = new_node;
+		(*head_ref)->tailer->Next = new_node; //Add new node as tail
+		(*head_ref)->tailer = new_node; // Mark it as tail
 	  
 	}
 	
