@@ -22,7 +22,7 @@ node* getNewNode(int value) {
 	new_node->Next = NULL;	
 	return new_node;
 }
-// create the tree
+// create the tree count
 node *createList() {
 	node *root = getNewNode(1);
 	root->Next = getNewNode(2);
