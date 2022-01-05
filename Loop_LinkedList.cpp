@@ -8,7 +8,7 @@
 
 using namespace std;
 
-
+// Hashing is better
 typedef struct ListNode
 {
 	int value;
