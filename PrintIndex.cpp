@@ -34,7 +34,7 @@ node *createList() {
 }
 
 
-//assuming root lies in the given range
+//assuming root lies in the given range /
 void GetIndex(node *ptr1 , int value, int getindex)
  {
 	if (ptr1 == NULL)
