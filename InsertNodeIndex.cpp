@@ -55,7 +55,7 @@ void AddNode(node** nodex, int index, int value)
 		count++;
 	}
 }
-
+/
 int main()
 {
 	node *head = NULL;
