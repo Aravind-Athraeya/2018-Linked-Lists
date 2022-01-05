@@ -84,7 +84,7 @@ void printList(node *nodex)
 
 
 
-
+//simple
 /* Function to remove duplicates from a 
    unsorted linked list */
 void removeDuplicateshash(struct Node *start) 
