@@ -44,6 +44,7 @@ string GetStringFromList(node* test)
 
 }
 
+//easier
 int CountList(node *nodex)
 {
 	int count = 0;
