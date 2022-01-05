@@ -32,7 +32,7 @@ node *createList() {
 }
 
 
-//assuming root lies in the given range
+//assuming root lies in the given range -- Base
 void PrintList(node *ptr1)
  {
 	if (ptr1 == NULL)
