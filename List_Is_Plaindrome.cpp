@@ -30,7 +30,7 @@ void push(node** head_ref, string  new_data)
 	(*head_ref) = new_node;
 }
 
-
+// LinkedList
 string GetStringFromList(node* test)
 {
 	string mmeh = "";
