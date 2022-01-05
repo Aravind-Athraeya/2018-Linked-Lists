@@ -29,7 +29,7 @@ void push(node** head_ref, int new_data)
 	/* move the head to point to the new node */
 	(*head_ref) = new_node;
 }
-
+//P
 void deletenode(node** ptr1, int index) {
 
 
