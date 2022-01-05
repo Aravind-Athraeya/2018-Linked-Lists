@@ -45,9 +45,9 @@ void Push(node** head_ref, int new_data)
 	 {
 
 		 next = curr->Next;
-		 curr->Next = prev;
-		 prev = curr;
-		 curr = next;
+		 curr->Next = prev; // REfer the pointer to back
+		 prev = curr;  // Move previous to current one step
+		 curr = next;  // move current to next one step
 	 }
 	 *lst = prev;
 
