@@ -73,7 +73,7 @@ node* Rotate(node* head, int K) {
 	return head;
 }
 
-
+// Make amaali,and cut
 
 
 
