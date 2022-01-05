@@ -52,7 +52,7 @@ void Push(node** head_ref, int new_data)
 	 return consol;
 }
 
-
+// simple
 int main()
 {
 	node *lstOne = NULL;
