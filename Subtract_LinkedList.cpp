@@ -14,7 +14,7 @@ typedef struct ListNode
 }node;
 
 
-
+//easy
 void Push(node** head_ref, int new_data)
 {
 	node* new_node = new node();
