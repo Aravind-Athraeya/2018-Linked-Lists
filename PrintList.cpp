@@ -47,7 +47,7 @@ void PrintList(node *ptr1)
 
 }
 
-
+//Base
 int main()
 {
 	node *head = NULL;
