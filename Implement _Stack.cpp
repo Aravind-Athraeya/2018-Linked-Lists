@@ -32,7 +32,7 @@ void push(node** head_ref, int new_data)
 
 
 
-
+// Pop
 void pop(node** head_ref)
 {
 		*head_ref = (*head_ref)->Next;
