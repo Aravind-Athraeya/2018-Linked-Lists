@@ -15,7 +15,7 @@ typedef struct ListNode
 }node;
 
 
-
+/
 void Queue(node** head_ref, int new_data)
 {
 	node* new_node = new node();	
