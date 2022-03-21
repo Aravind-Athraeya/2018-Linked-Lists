@@ -1,33 +1,18 @@
-#include <iostream>
-#include <string> 
-#include<conio.h>
-#include<stdio.h>
-#include<stdlib.h>
-#include <queue>
-using namespace std;
+// See https://aka.ms/new-console-template for more information
 
 
-typedef struct ListNode
+
+public class LinkedList
 {
-	int value;
-	struct ListNode *Next;
-}node;
+
+    public int nodeValue;
+    public LinkedList next = null;
 
 
-
-void Push(node** head_ref, int new_data)
-{
-	node* new_node = new node();	
-	new_node->value = new_data;	
-
-	
-
-	/* link the old list off the new node */
-	new_node->Next = (*head_ref);
-
-	/* move the head to point to the new node */
-	(*head_ref) = new_node;
-
+    public LinkedList(int nodeval)
+    {
+        nodeValue = nodeval;
+    }
 
 }
 
@@ -35,42 +20,87 @@ void Push(node** head_ref, int new_data)
 
 
 
-	
- void reverse(node ** lst)
+class TestSample
 {
-	 node* prev = NULL;
-	 node* curr = (*lst);
-	 node* next;
-	 while (curr != NULL)
-	 {
+    public static LinkedList tail = null;
+    public static LinkedList head = null;
+    static void Main(string[] args)
+    {
 
-		 next = curr->Next;
-		 curr->Next = prev; // REfer the pointer to back
-		 prev = curr;  // Move previous to current one step
-		 curr = next;  // move current to next one step
-	 }
-	 *lst = prev;
+
+        LinkedList lList = new LinkedList(1);
+        head = lList;
+        tail = lList;
+
+        AddNode(lList, 2);
+        AddNode(lList, 3);
+        AddNode(lList, 4);
+        AddNode(lList, 5);
+
+      ReverseList();
+
+
+    }
+
+
+    //Add at the end of the list
+    public static void AddNode(LinkedList Currentnode, int newNodeVal)
+    {
+        // Head is created first time a node is added to the list
+        if (head == null) {
+            head = Currentnode;
+        }
+
+
+        // Go till the end of the chain and add a new node
+        while (Currentnode != null && (Currentnode.next != null))
+        {
+            Currentnode = Currentnode.next;
+        }
+
+        var newlyaddednode = new LinkedList(newNodeVal);
+        Currentnode.next = newlyaddednode;
+
+        // Tail is updated at the end of addition of a new node
+        tail = newlyaddednode;
+
+    }
+
+
+    //public static LinkedList ReverseList(LinkedList Currentnode)
+    //{
+    //    LinkedList previous = null;
+    //    LinkedList curr = Currentnode;
+    //    while (curr != null)
+    //    {
+    //        LinkedList next = Currentnode.next;
+    //        Currentnode.next = previous;
+    //        previous = curr;
+    //        curr = next;
+
+    //    }
+    //    head = previous;
+
+    //    return Currentnode;
+
+    //}
+
+
+    public static void ReverseList()
+    {
+        LinkedList prev = null, current = head, next = null;
+        while (current != null)
+        {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        head = prev;
+    }
+
+
+
+
 
 }
-
-
-int main()
-{
-	node *lstOne = NULL;
-	//node *lndTwo = NULL;
-	Push(&lstOne, 1);
-	Push(&lstOne, 2);
-	Push(&lstOne, 3);
-	Push(&lstOne, 4);
-	reverse(&lstOne);
-	node *ldstOne = lstOne;
-
-	return 0;
-
-}
-
-
-
-
-
-
